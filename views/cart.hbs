@@ -1,0 +1,96 @@
+  <!-- Cart -->
+<!-- Process Steps -->
+    <div class="container my-5">
+        <ul class="steps">
+            <li class="active"><a href="/cart">Cart</a></li>
+            <li><a href="/cart/checkout">Shipping Address</a></li>
+            <li><a href="cart/payment">Payment</a></li>
+        </ul>
+    </div>
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Unit Cost</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <form class="form-cart-item-update" data-id="1">
+                        <tr>
+                            <td><img src="./images/book1.jpg" style="width:50px; height:50px" /> </td>
+                            <td>Book 1</td>
+                            <td>29.13</td>
+                            <td>
+                                <input id="quantity1" class="form-control" type="number" min="1" max="10" required="" value="2" />
+                            </td>
+                            <td class="text-right">$ 58.26</td>
+                            <td class="text-right">
+                                <button type="submit" class="btn btn-sm btn-success" ><i class="fa fa-check"></i> </button>
+                                <button class="btn btn-sm btn-danger btn-cart-remove" data-id="1"><i class="fa fa-trash"></i> </button>
+                            </td>
+                        </tr>
+                        </form>
+                        <form class="form-cart-item-update" data-id="2">
+                        <tr>
+                            <td><img src="./images/book2.jpg" style="width:50px; height:50px" /> </td>
+                            <td>Book 2</td>
+                            <td>62.07</td>
+                            <td>
+                                <input id="quantity2" class="form-control" type="number" min="1" max="10" required="" value="6" />
+                            </td>
+                            <td class="text-right">$ 372.42</td>
+                            <td class="text-right">
+                                <button type="submit" class="btn btn-sm btn-success" ><i class="fa fa-check"></i> </button>
+                                <button class="btn btn-sm btn-danger btn-cart-remove" data-id="2"><i class="fa fa-trash"></i> </button>
+                            </td>
+                        </tr>
+                        </form>
+                        <form class="form-cart-item-update" data-id="3">
+                        <tr>
+                            <td><img src="./images/book3.jpg" style="width:50px; height:50px" /> </td>
+                            <td>Book 3</td>
+                            <td>21.42</td>
+                            <td>
+                                <input id="quantity3" class="form-control" type="number" min="1" max="10" required="" value="1" />
+                            </td>
+                            <td class="text-right">$ 21.42</td>
+                            <td class="text-right">
+                                <button type="submit" class="btn btn-sm btn-success" ><i class="fa fa-check"></i> </button>
+                                <button class="btn btn-sm btn-danger btn-cart-remove" data-id="3"><i class="fa fa-trash"></i> </button>
+                            </td>
+                        </tr>
+                        </form>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            <td class="text-right h6">Total Cost</td>
+                            <td class="text-right h6">$452.10</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <a href="/" class="btn btn-block btn-light">Continue Shopping</a>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <a href="/cart/checkout" class="btn btn-lg btn-block btn-success text-uppercase">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
