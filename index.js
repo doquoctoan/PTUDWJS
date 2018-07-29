@@ -35,12 +35,12 @@ var cartsRouter=require('./routs/carts');
 app.use('/carts',cartsRouter);
 
 // Create database
-var models = require('./models');
-app.get('/sync', function(req, res){
-	models.sequelize.sync().then(function(){
-		res.send('database sync completed!');
-	});
-});
+// var models = require('./models');
+// app.get('/sync', function(req, res){
+// 	models.sequelize.sync().then(function(){
+// 		res.send('database sync completed!');
+// 	});
+// });
 // Set Server Port & Start Server
 app.set('port', (process.env.PORT || 5000));
 

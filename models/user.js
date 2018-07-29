@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     // associations can be defined here
     User.hasMany(models.Comment);
     User.hasMany(models.Address);
-    user.hasMany(models.Order);
+    User.hasMany(models.Order);
   };
   return User;
 };

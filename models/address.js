@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   Address.associate = function(models) {
     // associations can be defined here
     Address.belongsTo(models.User);
-    Address.hasMany(models.Order)
+    Address.hasMany(models.Order);
   };
   return Address;
 };
