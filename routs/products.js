@@ -1,18 +1,15 @@
 var express=require('express');
 var router=express.Router();
+// router.get("/",function(req,res){
+// 	res.render('cart');
+// 	});
 router.get("/",function(req,res){
-	res.render('cart');
-	});
-router.get("/checkout",function(req,res){
-	res.render('checkout');
-	});
-router.get("/payment",function(req,res){
-	res.render('payment');
-	});
-router.get("/confirm",function(req,res){
-	res.render('confirm');
-	});
+		res.render('index');
+		});
 router.get("/details",function(req,res){
+	res.render('details');
+	});
+router.get("/:id",function(req,res){
 	res.render('details');
 	});
 

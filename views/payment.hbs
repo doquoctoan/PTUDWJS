@@ -43,7 +43,7 @@
             </ul>
         </div>
         <div class="col-md-8 order-md-1">
-            <form class="needs-validation" novalidate method="POST" action="/cart/checkout/payment">
+            <form class="needs-validation" novalidate method="POST" action="/carts/payment">
                 <h4 class="mb-3">Payment Method</h4>
                 <div class="d-block my-3">
                     <div class="custom-control custom-radio">
@@ -61,7 +61,8 @@
                 </div>
                 
                 <hr class="mb-4">
-                <button class="btn btn-success btn-lg btn-block" type="submit"><a href="/cart/confirm">Confirm to Pay Now</a></button>
+                <button class="btn btn-success btn-lg btn-block" type="submit">Confirm to Pay Now</button>
+                 {{!-- <a href="/carts/confirm" class="btn btn-lg btn-block btn-success">Confirm to Pay Now</a> --}}
             </form>
         </div>
     </div>

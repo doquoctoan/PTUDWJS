@@ -21,6 +21,61 @@
 </div>
 <div class="container my-3">
     <h3>Comments</h3>
+    <form id="form-comment-add" role="form" data-product="2">
+        <div class="form-group">
+            <label for="comment">Add a new comment here</label>
+            <div class="form-row">
+                <div class="col-lg-11 col-md-10">
+                    <input type="text" class="form-control" id="input-comment-add" placeholder="Enter your comment">
+                </div>
+                <div class="col-lg-1 col-md-2">
+                    <button type="submit" class="btn btn-success">Post</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form role="form" id="form-comment-edit">
+        <div class="form-group">
+            <label for="editcomment">Edit your comment here</label>
+            <div class="form-row">
+                <div class="col-lg-10 col-md-8">
+                    <input type="text" class="form-control" id="input-comment-edit" placeholder="Edit your comment">
+                </div>
+                <input type="hidden" id="input-comment-id"/>
+                <div class="col-lg-1 col-sm-2">
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
+                <div class="col-lg-1 col-sm-2">
+                    <button class="btn btn-secondary btn-comment-cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
     <div id="comments">
+        <div class="row mx-1 mb-2 p-2  bg-light border-success" style="border-left: 6px solid; border-radius: 3px">
+            <div class="col-10">
+                <p class="text-justify">7/28/2018, 9:38:06 AM - asa</p>
+            </div>
+        </div>
+        <div class="row mx-1 mb-2 p-2  bg-light border-success" style="border-left: 6px solid; border-radius: 3px">
+            <div class="col-10">
+                <p class="text-justify">7/28/2018, 9:38:02 AM - </p>
+            </div>
+        </div>
+        <div class="row mx-1 mb-2 p-2  bg-light border-success" style="border-left: 6px solid; border-radius: 3px">
+            <div class="col-10">
+                <p class="text-justify">7/28/2018, 9:38:02 AM - </p>
+            </div>
+        </div>
+        <div class="row mx-1 mb-2 p-2  bg-light border-success" style="border-left: 6px solid; border-radius: 3px">
+            <div class="col-10">
+                <p class="text-justify">7/28/2018, 9:38:00 AM - asas</p>
+            </div>
+        </div>
+        <div class="row mx-1 mb-2 p-2  bg-light border-success" style="border-left: 6px solid; border-radius: 3px">
+            <div class="col-10">
+                <p class="text-justify">7/28/2018, 9:37:54 AM - asa</p>
+            </div>
+        </div>
     </div>
 </div>
