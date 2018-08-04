@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-// Setting for app here
+// Setting for app her
 // Set Public Folder
 app.use(express.static(__dirname + '/public'));
-
+app.use('/css',express.static(__dirname+'/node_modules/bootstrap/dist/css'));//set duong dan css
 // Use View Engine
 var expressHbs = require('express-handlebars');
 var hbs = expressHbs.create({
