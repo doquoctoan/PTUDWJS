@@ -7,11 +7,16 @@ app.use(express.static(__dirname + '/public'));
 app.use('/css',express.static(__dirname+'/node_modules/bootstrap/dist/css'));//set duong dan css
 // Use View Engine
 var expressHbs = require('express-handlebars');
+var paginateHelper = require('express-handlebars-paginate');//Phan trang
 var hbs = expressHbs.create({
 	extname			: 'hbs',
 	defaultLayout	: 'layout', 
 	layoutsDir		: __dirname + '/views/layouts/',
 	partialsDir		: __dirname + '/views/partials/',
+	helpers: {
+        paginate: paginateHelper.createPagination,
+        formatDate: formatDate
+    }
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
@@ -35,12 +40,12 @@ var cartsRouter=require('./routs/carts');
 app.use('/carts',cartsRouter);
 
 // Create database
-// var models = require('./models');
-// app.get('/sync', function(req, res){
-// 	models.sequelize.sync().then(function(){
-// 		res.send('database sync completed!');
-// 	});
-// });
+/*var models = require('./models');
+  app.get('/sync', function(req, res){
+	models.sequelize.sync().then(function(){
+		res.send('database sync completed!');
+	});
+}); */
 // Set Server Port & Start Server
 app.set('port', (process.env.PORT || 5000));
 
