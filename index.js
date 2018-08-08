@@ -14,8 +14,8 @@ var hbs = expressHbs.create({
 	layoutsDir		: __dirname + '/views/layouts/',
 	partialsDir		: __dirname + '/views/partials/',
 	helpers: {
-        paginate: paginateHelper.createPagination,
-        formatDate: formatDate
+        paginate: paginateHelper.createPagination
+       
     }
 });
 app.engine('hbs', hbs.engine);
