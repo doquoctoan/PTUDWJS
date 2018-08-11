@@ -15,8 +15,12 @@ router.get("/", (req, res) => {
 /* router.get("/details",function(req,res){
 	res.render('details');
 	}); */
-router.get("/:id", function(req, res) {
-    res.render('details');
+router.get("/:id", (req, res) => {
+    var id = req.params.id;
+    controller.getById(id, function(Product) {
+        res.locals.Product = Product;
+        res.render('details');
+    });
 });
 
 module.exports = router;
