@@ -34,7 +34,7 @@
             </div>
         </div>
     </form>
-    <form role="form" id="form-comment-edit">
+    <form role="form" id="form-comment-edit" style="display:none">
         <div class="form-group">
             <label for="editcomment">Edit your comment here</label>
             <div class="form-row">
@@ -55,11 +55,30 @@
         {{#each Product.Comments}}
         <div class="row mx-1 mb-2 p-2  bg-light border-success" style="border-left: 6px solid; border-radius: 3px">
             <div class="col-10">
-                <p class="text-justify">- asa</p>
+                <p class="text-justify">{{createdAt}}, {{comment}} </p>
             </div>
         </div>
         {{/each}}
     </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="?page=1">Previous</a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link" href="?page=1">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page=2">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page=2">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page=2">Next</a>
+            </li>
+        </ul>
+    </nav>
 
 
 </div>
