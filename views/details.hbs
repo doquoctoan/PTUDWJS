@@ -55,12 +55,14 @@
         {{#each Product.Comments}}
         <div class="row mx-1 mb-2 p-2  bg-light border-success" style="border-left: 6px solid; border-radius: 3px">
             <div class="col-10">
-                <p class="text-justify">{{createdAt}}, {{comment}} </p>
+                <p class="text-justify">{{formatDate createdAt}}, {{comment}} </p>
             </div>
         </div>
         {{/each}}
     </div>
+    {{#if hasPagination}}
     <nav aria-label="Page navigation example">
+        {{{paginate pagination}}} {{!--
         <ul class="pagination">
             <li class="page-item disabled">
                 <a class="page-link" href="?page=1">Previous</a>
@@ -77,8 +79,8 @@
             <li class="page-item">
                 <a class="page-link" href="?page=2">Next</a>
             </li>
-        </ul>
+        </ul> --}}
     </nav>
-
+    {{/if}}
 
 </div>

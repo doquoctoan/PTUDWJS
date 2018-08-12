@@ -24,16 +24,15 @@ router.get("/:id", (req, res) => {
         var pagination = {
             limit: limit,
             page: page,
-            totalRow: Product.Comments.length
+            totalRows: Product.Comments.length
         };
         var offset = (page - 1) * limit;
         Product.Comments = Product.Comments.sort(function(a, b) {
             return b.updatedAt.getTime() - a.updatedAt.getTime();
         }).slice(offset, offset + limit);
-        res.locals.Product = Product;
-
         res.locals.pagination = pagination;
         res.locals.hasPagination = (pagination.totalRows / limit > 1);
+        res.locals.Product = Product;
         res.render('details');
     });
 });

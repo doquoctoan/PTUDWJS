@@ -1,0 +1,29 @@
+  <!-- Search -->
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">SEARCH RESULT</h1>
+        <p><strong>{{count}}</strong> products were found for query <span class="text-success">'{{query}}'</span></p>
+    </div>
+</section>
+<div class="container my-3">
+    <div class="row">
+        <!-- Products List -->
+        {{#each ProductList}}
+        <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card text-left">
+                <a href="/products/{{id}}" title="Click to view details">
+                            <img class="card-img-top book-cover" src="/images/{{imagepath}}" alt="">
+                        </a>
+                <div class="card-body">
+                    <h4 class="card-title">{{name}}</h4>
+                    <p class="card-text book-summary">{{summary}}</p>
+                </div>
+                <div class="card-footer">
+                    <div class="book-price text-left pull-left">${{price}}</div>
+                    <button type="submit" class="btn btn-success btn-sm pull-right btn-cart-add" data-id="2">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

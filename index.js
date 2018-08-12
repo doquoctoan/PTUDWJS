@@ -2,6 +2,19 @@ var express = require('express');
 var app = express();
 
 // Setting for app her
+const morgan = require('morgan');
+app.use(morgan('dev', {
+    skip: function(req, res) {
+        return res.statusCode < 400
+    },
+    stream: process.stderr
+}));
+app.use(morgan('dev', {
+    skip: function(req, res) {
+        return res.statusCode >= 400
+    },
+    stream: process.stdout
+}));
 // Set Public Folder
 app.use(express.static(__dirname + '/public'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); //set duong dan css
@@ -27,9 +40,9 @@ app.set('view engine', 'hbs');
 // app.get("/",function(req,res){
 // res.render('index');
 // });
-app.get("/", function(req, res) {
-    res.redirect('/products');
-});
+var indexRouter = require('./routs/index'); //chuyển vao routs/index
+app.use('/', indexRouter);
+
 var userRouter = require('./routs/users');
 app.use('/users', userRouter);
 
